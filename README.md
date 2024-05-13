@@ -7,11 +7,13 @@ Mendesain Database dalam Bentuk Normal Ketiga (3NF) untuk Field yang Disediakan
     Pelanggan: Mewakili pelanggan yang terlibat dalam transaksi dengan detail seperti usia, jenis kelamin, kode pos asal.
     Penjual: Mewakili penjual yang terlibat dalam transaksi dengan detail seperti kode pos penjual, kategori.
  2. Membuat Tabel dan Mendefinisikan Primary Key:
-    **Tabel Transaksi**
+
+     **Tabel Transaksi**
      transaction_id (INT) PRIMARY KEY -- Pengenal unik untuk setiap transaksi
      step VARCHAR(255) -- Langkah dalam proses transaksi
      amount DECIMAL(10,2) - Jumlah/berat barang dalam ekspedisi pengiriman 
      fraud integer
+    
     **Tabel customer**
     customer_id INT PRIMARY KEY -- Pengenal unik untuk setiap pelanggan
     age INT -- Usia pelanggan
@@ -24,11 +26,11 @@ Mendesain Database dalam Bentuk Normal Ketiga (3NF) untuk Field yang Disediakan
     zipMerchant VARCHAR(255) --Kode pos penjual
     category TEXT
 
- 3. Membangun Relasi Foreign Key:
+ 4. Membangun Relasi Foreign Key:
     Tabel Transaksi:
      - Tambahkan foreign key customer_id yang mereferensikan customer_id di tabel Pelanggan.
      - Tambahkan foreign key merchant_id yang mereferensikan merchant_id di tabel Penjual.
- 4. Struktur Database yang dihasilkan:
+ 5. Struktur Database yang dihasilkan:
 
      SQL
 
@@ -58,12 +60,12 @@ Mendesain Database dalam Bentuk Normal Ketiga (3NF) untuk Field yang Disediakan
      );
 
 
-  5. Manfaat Desain 3NF:
+  6. Manfaat Desain 3NF:
      Integritas Data: Menghilangkan duplikasi data dan mengurangi risiko ketidakkonsistenan data.
      Manipulasi Data Lebih Mudah: Menyederhanakan penyisipan, pembaruan, dan penghapusan data.
      Ruang Penyimpanan Berkurang: Menghemat penyimpanan dengan menyimpan data berulang hanya sekali.
      Performa Query yang Lebih Baik: Memisahkan data terkait dapat mengoptimalkan query untuk aspek tertentu.
-  6. Dampak pada Query:
+  7. Dampak pada Query:
      Pengambilan Data yang Efisien: Query dapat secara efisien mengambil data tertentu dari tabel yang sesuai tanpa join yang tidak perlu.
      Mengurangi Operasi Join: Lebih sedikit join yang diperlukan, sehingga meningkatkan kinerja query.
      Hasil yang Akurat: Tidak adanya duplikasi data memastikan hasil query akurat dan konsisten.
