@@ -43,38 +43,54 @@ Mendesain Database dalam Bentuk Normal Ketiga (3NF) untuk Field yang Disediakan
 
      SQL
 
-     CREATE TABLE Transaksi (
+     CREATE TABLE Transaksi
+     (
         transaction_id INT PRIMARY KEY,
+    
         step VARCHAR(255),
+    
         amount DECIMAL(10,2),
+    
         fraud BOOLEAN,
+    
         customer_id INT,
+    
         merchant_id INT,
+    
         FOREIGN KEY (customer_id) REFERENCES Pelanggan(customer_id),
+    
         FOREIGN KEY (merchant_id) REFERENCES Penjual(merchant_id)
       );
 
      CREATE TABLE Pelanggan (
        customer_id INT PRIMARY KEY,
+    
        age INT,
+    
        gender VARCHAR(255),
+    
        zipcodeOri VARCHAR(255)
      );
 
     CREATE TABLE Penjual (
+    
      merchant_id INT PRIMARY KEY,
+    
      name VARCHAR(255),
+    
      zipMerchant VARCHAR(255),
+    
      category VARCHAR(255)
+    
      );
 
 
-  6. Manfaat Desain 3NF:
+  7. Manfaat Desain 3NF:
      Integritas Data: Menghilangkan duplikasi data dan mengurangi risiko ketidakkonsistenan data.
      Manipulasi Data Lebih Mudah: Menyederhanakan penyisipan, pembaruan, dan penghapusan data.
      Ruang Penyimpanan Berkurang: Menghemat penyimpanan dengan menyimpan data berulang hanya sekali.
      Performa Query yang Lebih Baik: Memisahkan data terkait dapat mengoptimalkan query untuk aspek tertentu.
-  7. Dampak pada Query:
+  8. Dampak pada Query:
      Pengambilan Data yang Efisien: Query dapat secara efisien mengambil data tertentu dari tabel yang sesuai tanpa join yang tidak perlu.
      Mengurangi Operasi Join: Lebih sedikit join yang diperlukan, sehingga meningkatkan kinerja query.
      Hasil yang Akurat: Tidak adanya duplikasi data memastikan hasil query akurat dan konsisten.
