@@ -46,6 +46,8 @@ Mendesain Database dalam Bentuk Normal Ketiga (3NF) untuk Field yang Disediakan
      CREATE TABLE Transaksi
 
      (
+
+
         transaction_id INT PRIMARY KEY,
     
         step VARCHAR(255),
@@ -64,8 +66,11 @@ Mendesain Database dalam Bentuk Normal Ketiga (3NF) untuk Field yang Disediakan
       );
 
      CREATE TABLE Pelanggan
+
     (
     
+
+
        customer_id INT PRIMARY KEY,
     
        age INT,
@@ -76,8 +81,11 @@ Mendesain Database dalam Bentuk Normal Ketiga (3NF) untuk Field yang Disediakan
      );
 
     CREATE TABLE Penjual
+
     (
     
+
+
      merchant_id INT PRIMARY KEY,
     
      name VARCHAR(255),
