@@ -69,29 +69,29 @@ Mendesain Database dalam Bentuk Normal Ketiga (3NF) untuk Field yang Disediakan
 
      (
     
-       customer_id INT PRIMARY KEY,
+        customer_id INT PRIMARY KEY,
     
-       age INT,
+        age INT,
     
-       gender VARCHAR(255),
+        gender VARCHAR(255),
     
-       zipcodeOri VARCHAR(255)
+        zipcodeOri VARCHAR(255)
 
       );
 
-    CREATE TABLE Penjual
+     CREATE TABLE Penjual
 
-     (
+      (
     
-       merchant_id INT PRIMARY KEY,
+        merchant_id INT PRIMARY KEY,
     
-       name VARCHAR(255),
+        name VARCHAR(255),
     
-       zipMerchant VARCHAR(255),
+        zipMerchant VARCHAR(255),
     
-       category VARCHAR(255)
+        category VARCHAR(255)
     
-      );
+       );
 
 
   7. Manfaat Desain 3NF:
