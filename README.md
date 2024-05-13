@@ -10,20 +10,29 @@ Mendesain Database dalam Bentuk Normal Ketiga (3NF) untuk Field yang Disediakan
 
      **Tabel Transaksi**
      transaction_id (INT) PRIMARY KEY -- Pengenal unik untuk setiap transaksi
+    
      step VARCHAR(255) -- Langkah dalam proses transaksi
-     amount DECIMAL(10,2) - Jumlah/berat barang dalam ekspedisi pengiriman 
+    
+     amount DECIMAL(10,2) - Jumlah/berat barang dalam ekspedisi pengiriman
+    
      fraud integer
     
     **Tabel customer**
     customer_id INT PRIMARY KEY -- Pengenal unik untuk setiap pelanggan
+    
     age INT -- Usia pelanggan
+    
     gender VARCHAR(255) --Jenis kelamin pelanggan
+    
     zipcodeOri VARCHAR(255) -- Kode pos asal pelanggan
 
     **Tabel Penjual**
     merchant_id INT PRIMARY KEY --Pengenal unik untuk setiap penjual
+    
     name VARCHAR(255) --Nama penjual
+    
     zipMerchant VARCHAR(255) --Kode pos penjual
+    
     category TEXT
 
  4. Membangun Relasi Foreign Key:
