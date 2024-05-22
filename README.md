@@ -106,3 +106,15 @@ Mendesain Database dalam Bentuk Normal Ketiga (3NF) untuk Field yang Disediakan
      Kesimpulan:
      Mendesain database dalam 3NF mengikuti prinsip integritas data dan meningkatkan kinerja query. Struktur yang dinormalisasi menyederhanakan manajemen data, mengurangi 
      kebutuhan penyimpanan, dan memastikan keakuratan hasil saat mengambil data.
+
+     ## load data ke Cloud SQL menggunakan PG_DUMP ##
+
+     PG_DUMP memungkinkan data pada tabel sql diekspor sebagai tabel sql utuh. pada cloud sql, buat instance potgresql dan masukkan dump sql yang telah dibuat.
+
+     ## migrasi data ke bigquery menggunakan datastream ##
+     data stream adalah layanan yang disediakan GCP untuk melakukan migrasi data.
+     terdapat beberapa proses konfigurasi pada database asal yang harus dilakukan seperti melakukan database replication pada cloudsql, membuat connection profile, 
+     menentukan source db dan destinasi db, melakukan autorisasi network, dsb.
+
+     sesuai requirement, database dipindahkan secara as is tanpa dilakukan transformasi.
+     
